@@ -5,16 +5,13 @@ class ejercicio2():
     self.intentos = 0
     self.palabra = 0
     
-  
-  
-  
   def asignarDatos(self):
     self.password = "lunes"
     self.intentos = 0
     self.palabra = ""
   
   def mostrarMensaje(self):
-    while self.palabra != password:
+    while self.palabra != self.password:
       self.palabra = input("Contraseña:")
       self.intentos += 1
       if self.intentos == 5:

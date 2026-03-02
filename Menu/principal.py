@@ -4,6 +4,9 @@ from Ejercicios.ejercicio3 import ejercicio_3
 from Ejercicios.ejercicio4 import ejercicio_4
 #referenciar la clase
 from poo.clases.ejer1poo import ejercicio1
+from poo.clases.ejer2poo import ejercicio2
+from poo.clases.ejer3poo import ejercicio3
+from poo.clases.ejer4poo import ejercicio4
  #carpeta carpeta carpeta       clase
  
 def menuPrincipal():
@@ -28,11 +31,20 @@ def menuPrincipal():
                 e1.calcularAprox()
                 e1.mostrarResultados()
                 
-            
+            case 2:
+                e2 = ejercicio2
+                e2.asignarDatos()
+                e2.mostrarMensaje()
+                
             case 3:
-                ejercicio_3()
+                e3 = ejercicio3
+                e3.leerPalabra()
+                
             case 4:
-                ejercicio_4()
+                e4 = ejercicio4
+                e4.leerValores()
+                e4.calcularTiempo()
+                e4.mostrarTiempo()
             case 5:
                 print("Hasta pronto")
                 break

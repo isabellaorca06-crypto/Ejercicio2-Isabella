@@ -11,4 +11,3 @@ class ejercicio3():
         break
       else:
         print(self.palabra)
-  

@@ -26,6 +26,3 @@ class ejercicio4():
   
   def mostrarTiempo(self):
     print("Tiempo en salir:",self.tiempo)
-    
-
-    
