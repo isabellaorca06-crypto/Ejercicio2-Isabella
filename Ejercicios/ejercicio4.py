@@ -1,31 +1,26 @@
 import math
-class ejercicio4():
-  def __init__(self):
-    self.n = 0
-    self.u = 0
-    self.d = 0
-    self.ascenso = 0
-    self.tiempo = 0
-    
-  def leerValores(self):
-    self.n=int(input("Profundidad del pozo(pulg)="))
-    self.u=int(input("Energía(pulg/min)="))
-  
-
-  def calcularTiempo(self):
-    self.d = 1
-    self.ascenso=0
-    self.tiempo  = 0
-    while True:
-      self.ascenso += self.u #desplazamiento hacia arriba
-      self.tiempo += 1  #Tiempo de ascenso
-      if self.ascenso >= self.n:  #Si llegó a la cima sale del ciclo
-        break;
-      self.ascenso -= self.d #Desplazamiento hacia abajo
-      self.tiempo += 1  #Tiempo de descanso
-  
-  def mostrarTiempo(self):
-    print("Tiempo en salir:",self.tiempo)
-    
-
-    
+def leerValores():
+  n=int(input("Profundidad del pozo(pulg)="))
+  u=int(input("Energía(pulg/min)="))
+  return n,u
+ 
+def calcularTiempo(n,u):
+  d = 1
+  ascenso=0
+  tiempo  = 0
+  while True:
+    ascenso += u #desplazamiento hacia arriba
+    tiempo += 1  #Tiempo de ascenso
+    if ascenso >= n:  #Si llegó a la cima sale del ciclo
+      break;
+    ascenso -= d #Desplazamiento hacia abajo
+    tiempo += 1  #Tiempo de descanso
+  return tiempo
+ 
+def mostrarResultado(tiempo):
+  print("Tiempo en salir:",tiempo)
+ 
+def ejercicio_4():
+    n,u = leerValores()
+    tiempo = calcularTiempo(n,u)
+    mostrarResultado(tiempo)

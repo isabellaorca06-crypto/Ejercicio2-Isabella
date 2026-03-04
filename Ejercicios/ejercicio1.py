@@ -1,31 +1,29 @@
 import math
-class ejercicio1():
-  def __init__(self):
-    self.x = 0
-    self.tolerancia = 0
-    self.valorReal = 0
-    self.k = 0
-    self.aprox = 0
-    self.error = 0
-    
-  def leerDatos(self):
-    self.x = float(input("x="))
-    self.tolerancia = float(input("Tolerancia="))
-  
-  def calcularAprox(self):
-    self.valorReal = math.sin(self.x)
-    self.k = 0
-    self.aprox = 0
-    while True:
-      self.aprox += ((-1)**self.k*self.x**(2*self.k+1))/math.factorial(2*self.k+1)
-      self.k += 1
-      self.error = math.fabs((self.valorReal - self.aprox)/self.valorReal) * 100
-      if self.error < self.tolerancia:
-        break
-  
-  def mostrarResultados(self):
-    print("Valor Real = ",self.valorReal)
-    print("Aproximacion = ",self.aprox)
-    print("Error = ",self.error)
+def leerDatos():
+  x = float(input("x="))
+  tolerancia = float(input("Tolerancia="))
+  return x,tolerancia
+ 
+def calcularAprox(x,tolerancia):
+  valorReal = math.sin(x)
+  k = 0
+  aprox = 0
+  while True:
+    aprox += ((-1)**k*x**(2*k+1))/math.factorial(2*k+1)
+    k += 1
+    error = math.fabs((valorReal - aprox)/valorReal) * 100
+    if error < tolerancia:
+      break
+  return valorReal,aprox,error
+ 
+def mostrarResultado(valorReal,aprox,error):
+  print("Valor real = ", valorReal)
+  print("Aproximación = ", aprox)
+  print("Error = ",error)
+ 
+def ejercicio_1():
+    x,tolerancia = leerDatos()
+    valorReal,aprox,error = calcularAprox(x,tolerancia)
+    mostrarResultado(valorReal,aprox,error)
   
  
