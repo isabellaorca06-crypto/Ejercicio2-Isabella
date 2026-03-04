@@ -3,10 +3,10 @@ from Ejercicios.ejercicio2 import ejercicio_2
 from Ejercicios.ejercicio3 import ejercicio_3 
 from Ejercicios.ejercicio4 import ejercicio_4
 #referenciar la clase
-from poo.clases.ejer1poo import ejercicio1
-from poo.clases.ejer2poo import ejercicio2
-from poo.clases.ejer3poo import ejercicio3
-from poo.clases.ejer4poo import ejercicio4
+from poo.clases.ejer1poo import Ejercicio1
+from poo.clases.ejer2poo import Ejercicio2
+from poo.clases.ejer3poo import Ejercicio3
+from poo.clases.ejer4poo import Ejercicio4
  #carpeta carpeta carpeta       clase
  
 def menuPrincipal():
@@ -25,23 +25,23 @@ def menuPrincipal():
                 #ejercicio_1()
                 
                 #crear el objeto de la clase
-                e1 = ejercicio1 ()
+                e1 = Ejercicio1 ()
                 #Llamada a los metodos 
                 e1.leerDatos()
                 e1.calcularAprox()
                 e1.mostrarResultados()
                 
             case 2:
-                e2 = ejercicio2
+                e2 = Ejercicio2()
                 e2.asignarDatos()
                 e2.mostrarMensaje()
                 
             case 3:
-                e3 = ejercicio3
+                e3 = Ejercicio3()
                 e3.leerPalabra()
                 
             case 4:
-                e4 = ejercicio4
+                e4 = Ejercicio4()
                 e4.leerValores()
                 e4.calcularTiempo()
                 e4.mostrarTiempo()

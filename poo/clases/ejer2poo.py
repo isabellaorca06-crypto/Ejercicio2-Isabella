@@ -1,5 +1,5 @@
 import math
-class ejercicio2():
+class Ejercicio2():
   def __init__(self):
     self.password = 0
     self.intentos = 0

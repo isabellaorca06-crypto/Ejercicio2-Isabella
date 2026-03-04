@@ -1,5 +1,5 @@
 import math
-class ejercicio1():
+class Ejercicio1():
     def __init__(self):
         self.x = 0
         self.tolerancia = 0

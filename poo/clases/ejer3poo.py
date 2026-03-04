@@ -1,5 +1,5 @@
 import math
-class ejercicio3():
+class Ejercicio3():
   
   def __init__(self):
       self.palabra = 0

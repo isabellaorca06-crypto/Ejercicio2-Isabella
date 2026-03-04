@@ -1,5 +1,5 @@
 import math
-class ejercicio4():
+class Ejercicio4():
   def __init__(self):
     self.n = 0
     self.u = 0

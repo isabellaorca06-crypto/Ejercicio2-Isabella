@@ -1,7 +1,7 @@
-from Menu.principal import MenuPrincipal
+from Menu.principal import menuPrincipal
 
 def main():
-    MenuPrincipal()
+    menuPrincipal()
     
 if __name__=='__main__':
     main()
